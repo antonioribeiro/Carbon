@@ -13,7 +13,6 @@ env:
 
 before_install:
   - sudo apt-get update && sudo apt-get --reinstall install -qq language-pack-fr
-  - if [[ $coverage = 'false' ]]; then phpenv config-rm xdebug.ini; fi
 
 install:
   - if [[ $phpstan = 'true' ]]; then travis_retry composer require --dev phpstan/phpstan; fi
